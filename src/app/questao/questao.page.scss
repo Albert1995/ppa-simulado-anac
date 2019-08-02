@@ -1,0 +1,36 @@
+.alternativa {
+    background: cyan;
+    padding: 20px;
+    text-align: center;
+}
+
+.alternativa-selecionada {
+    background: red;
+}
+
+.bottom-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.botoes-superiores {
+    display: flex;
+    justify-content: space-between;
+}
+
+.questao {
+    padding: 0 10px 0 10px;
+}
+
+.botoes-inferiores {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    ion-grid {
+        margin-bottom: 30px;
+    }
+}

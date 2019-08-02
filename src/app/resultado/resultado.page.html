@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Resultado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h2 class="titulo" [ngClass]="{ 'aprovado': total >= 14, 'reprovado': !(total >= 14) }">
+    <ng-template *ngIf="total >= 14; else elseResultado">Aprovado</ng-template>
+    <ng-template #elseResultado>Reprovado</ng-template>
+  </h2>
+
+  <div class="informacao">
+    <p *ngIf="!(total >= 14)">Necessário 14 acertos no simulado para ser aprovado.</p>
+    <p *ngIf="total == 20">Parabéns! Você gabaritou o simulado.</p>
+
+    <p>Você acertou {{ total }} questões</p>  
+  </div>
+
+  <div class="botoes">
+    <ion-button (click)="newOnClick()">
+      Novo Simulado
+    </ion-button>
+
+    <ion-button (click)="goBack()">
+        Menu
+    </ion-button>
+  </div>
+
+</ion-content>

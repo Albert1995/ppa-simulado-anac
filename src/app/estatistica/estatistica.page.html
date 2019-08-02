@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Desempenho</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="desempenho">
+    <h3>Conhecimentos Técnicos</h3>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="2">Total</ion-col>
+        <ion-col size="3">Aprovados</ion-col>
+        <ion-col size="3">Reprovados</ion-col>
+        <ion-col size="4">Aproveitamento</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="2">{{ mecanicaResultado[0] + mecanicaResultado[1] }}</ion-col>
+        <ion-col size="3">{{ mecanicaResultado[0] }}</ion-col>
+        <ion-col size="3">{{ mecanicaResultado[1] }}</ion-col>
+        <ion-col size="4">{{ mecanicaResultado[0] / ((mecanicaResultado[0] + mecanicaResultado[1]) > 0 ? (mecanicaResultado[0] + mecanicaResultado[1]) : 1) }} %</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="desempenho">
+    <h3>Meteorologia</h3>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="2">Total</ion-col>
+        <ion-col size="3">Aprovados</ion-col>
+        <ion-col size="3">Reprovados</ion-col>
+        <ion-col size="4">Aproveitamento</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="2">{{ meteorologiaResultado[0] + meteorologiaResultado[1] }}</ion-col>
+        <ion-col size="3">{{ meteorologiaResultado[0] }}</ion-col>
+        <ion-col size="3">{{ meteorologiaResultado[1] }}</ion-col>
+        <ion-col size="4">{{ meteorologiaResultado[0] / ((meteorologiaResultado[0] + meteorologiaResultado[1]) > 0 ? (meteorologiaResultado[0] + meteorologiaResultado[1]) : 1) }} %</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="desempenho">
+      <h3>Navegação</h3>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="2">Total</ion-col>
+          <ion-col size="3">Aprovados</ion-col>
+          <ion-col size="3">Reprovados</ion-col>
+          <ion-col size="4">Aproveitamento</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="2">{{ navegacaoResultado[0] + navegacaoResultado[1] }}</ion-col>
+          <ion-col size="3">{{ navegacaoResultado[0] }}</ion-col>
+          <ion-col size="3">{{ navegacaoResultado[1] }}</ion-col>
+          <ion-col size="4">{{ navegacaoResultado[0] / ((navegacaoResultado[0] + navegacaoResultado[1]) > 0 ? (navegacaoResultado[0] + navegacaoResultado[1]) : 1) }} %</ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="desempenho">
+      <h3>Regulamentos</h3>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="2">Total</ion-col>
+          <ion-col size="3">Aprovados</ion-col>
+          <ion-col size="3">Reprovados</ion-col>
+          <ion-col size="4">Aproveitamento</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="2">{{ regulamentosResultado[0] + regulamentosResultado[1] }}</ion-col>
+          <ion-col size="3">{{ regulamentosResultado[0] }}</ion-col>
+          <ion-col size="3">{{ regulamentosResultado[1] }}</ion-col>
+          <ion-col size="4">{{ regulamentosResultado[0] / ((regulamentosResultado[0] + regulamentosResultado[1]) > 0 ? (regulamentosResultado[0] + regulamentosResultado[1]) : 1) }} %</ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="desempenho">
+      <h3>Teoria de Vôo</h3>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="2">Total</ion-col>
+          <ion-col size="3">Aprovados</ion-col>
+          <ion-col size="3">Reprovados</ion-col>
+          <ion-col size="4">Aproveitamento</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="2">{{ teoriaResultado[0] + teoriaResultado[1] }}</ion-col>
+          <ion-col size="3">{{ teoriaResultado[0] }}</ion-col>
+          <ion-col size="3">{{ teoriaResultado[1] }}</ion-col>
+          <ion-col size="4">{{ teoriaResultado[0] / ((teoriaResultado[0] + teoriaResultado[1]) > 0 ? (teoriaResultado[0] + teoriaResultado[1]) : 1) }} %</ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+</ion-content>

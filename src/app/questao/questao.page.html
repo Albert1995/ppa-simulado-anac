@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Simulado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="botoes-superiores">
+    <ion-button (click)="voltaQuestao()" [disabled]="questaoAtual == 0">
+      Anterior
+    </ion-button>
+    <ion-button (click)="listaQuestaoOnClick()">
+      Questões
+    </ion-button>
+    <ion-button (click)="proximaQuestao()" [disabled]="questaoAtual == 19">
+      Próxima
+    </ion-button>
+  </div>
+  <div class="questao">
+    <p>{{ questaoView.questao || "Carregando..." }}</p>
+
+    <p>A) {{ questaoView.alternativas[0] || "Carregando..." }}</p>
+    <p>B) {{ questaoView.alternativas[1] || "Carregando..." }}</p>
+    <p>C) {{ questaoView.alternativas[2] || "Carregando..." }}</p>
+    <p>D) {{ questaoView.alternativas[3] || "Carregando..." }}</p>
+  </div>
+  <div class="botoes-inferiores">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col class="alternativa" [ngClass]="{'alternativa-selecionada': questaoView.resposta == 0}" size="5" (click)="respostaOnClick(0)">A</ion-col>
+        <ion-col size="2"></ion-col>
+        <ion-col class="alternativa" [ngClass]="{'alternativa-selecionada': questaoView.resposta == 1}" size="5" (click)="respostaOnClick(1)">B</ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12"></ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="alternativa" [ngClass]="{'alternativa-selecionada': questaoView.resposta == 2}" size="5" (click)="respostaOnClick(2)">C</ion-col>
+        <ion-col size="2"></ion-col>
+        <ion-col class="alternativa" [ngClass]="{'alternativa-selecionada': questaoView.resposta == 3}" size="5" (click)="respostaOnClick(3)">D</ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-button (click)="finishOnClick()" expand="block">
+      Finalizar
+    </ion-button>
+  </div>
+
+</ion-content>

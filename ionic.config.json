@@ -1,5 +1,7 @@
 {
   "name": "ppa-simulado",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

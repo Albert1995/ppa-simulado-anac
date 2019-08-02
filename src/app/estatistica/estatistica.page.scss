@@ -1,0 +1,24 @@
+.desempenho {
+    border-bottom: 1px solid gray;
+
+    h3 {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    ion-grid {
+        ion-row {
+            &:nth-child(1) {
+                text-align: center;
+                ion-col {
+                    font-weight: bold;
+                    font-size: 0.85em;
+                }
+            }
+            &:nth-child(2) {
+                text-align: end;
+            }
+        }
+    }
+}
