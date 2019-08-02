@@ -25,19 +25,19 @@ export class EstatisticaPage implements OnInit {
       this.keys.forEach(async k => {        
         if (keys.indexOf(k) > -1) {          
           switch(k) {
-            case keys[0]:
+            case 'mecanica':
               this.mecanicaResultado = await this.storage.getItem(k);
               break;
-            case keys[1]:
+            case 'meteorologia':
               this.meteorologiaResultado = await this.storage.getItem(k);
               break;
-            case keys[2]:
+            case 'navegacao':
               this.navegacaoResultado = await this.storage.getItem(k);
               break;
-            case keys[3]:
+              case 'regulamentos':
               this.regulamentosResultado = await this.storage.getItem(k);
               break;
-            case keys[4]:
+            case 'teoria-voo':
               this.teoriaResultado = await this.storage.getItem(k);
               break;
           }

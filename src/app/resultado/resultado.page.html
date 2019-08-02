@@ -7,7 +7,7 @@
 <ion-content>
 
   <h2 class="titulo" [ngClass]="{ 'aprovado': total >= 14, 'reprovado': !(total >= 14) }">
-    <ng-template *ngIf="total >= 14; else elseResultado">Aprovado</ng-template>
+    <div *ngIf="total >= 14; else elseResultado">Aprovado</div>
     <ng-template #elseResultado>Reprovado</ng-template>
   </h2>
 
